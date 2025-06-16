@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardápio Madda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: url('logo.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .container {
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.9);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    h2.bemvindo {
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #333;
+      text-align: center;
+    }
+    .logo {
+      width: 150px;
+      margin-bottom: 15px;
+    }
+    .opcoes {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: white;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    .subcontainer {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      max-width: 600px;
+      margin-top: 30px;
+    }
+    .subcontainer ul {
+      padding-left: 20px;
+    }
+    .voltar {
+      margin-top: 20px;
+    }
+    .avaliacao {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="inicio">
+      <img src="logo.jpeg" alt="Logo Madda" class="logo">
+      <h2 class="bemvindo">Bem-vindo ao Restaurante e Lanchonete Madda</h2>
+      <h1>Escolha uma opção</h1>
+      <div class="opcoes">
+        <button onclick="mostrarLanchonete()">Lanchonete</button>
+        <button onclick="mostrarRestaurante()">Restaurante</button>
+      </div>
+      <div class="avaliacao">
+        <a href="https://www.google.com/search?q=Ma.dda+Restaurante+lanchonete+Coment%C3%A1rios" target="_blank">⭐ Avalie no Google</a>
+      </div>
+    </div>
+
+    <div class="subcontainer" id="lanchonete">
+      <h2>Cardápio da Lanchonete</h2>
+      <ul id="lanchonete-lista"></ul>
+      <button class="voltar" onclick="voltarInicio()">⬅ Voltar</button>
+    </div>
+
+    <div class="subcontainer" id="restaurante">
+      <h2>Selecione o dia da semana</h2>
+      <div class="opcoes">
+        <button onclick="mostrarCardapio('segunda')">Segunda-feira</button>
+        <button onclick="mostrarCardapio('terca')">Terça-feira</button>
+        <button onclick="mostrarCardapio('quarta')">Quarta-feira</button>
+        <button onclick="mostrarCardapio('quinta')">Quinta-feira</button>
+        <button onclick="mostrarCardapio('sexta')">Sexta-feira</button>
+        <button onclick="mostrarCardapio('sabado')">Sábado</button>
+      </div>
+      <button class="voltar" onclick="voltarInicio()">⬅ Voltar</button>
+    </div>
+
+    <div class="subcontainer" id="cardapio"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
