@@ -19,10 +19,10 @@ O cliente pode selecionar se deseja visualizar o cardápio da **Lanchonete** (ca
 ---
 
 ## 🛠️ Como editar o cardápio (modo admin)
-1. Acesse o arquivo `index.html`
-2. Localize a seção `const cardapios = { ... }` para alterar os dias e preços
-3. Para editar o menu da lanchonete, edite diretamente no HTML
-4. Faça o commit e o push das alterações para que o site seja atualizado
+1. Acesse o arquivo `script.js`.
+2. Localize a constante `cardapios` para alterar os dias e preços do restaurante.
+3. Para editar o menu da lanchonete, localize a constante `lanchonete` no mesmo arquivo `script.js`.
+4. Faça o commit e o push das alterações para que o site seja atualizado.
 
 > ⚠️ Em breve: versão com painel administrativo para facilitar alterações sem editar o código
 
@@ -31,7 +31,7 @@ O cliente pode selecionar se deseja visualizar o cardápio da **Lanchonete** (ca
 ## 📷 Logo
 A logo do restaurante está localizada no arquivo:  
 `/imagens/logo.jpeg`  
-Ela é exibida na tela inicial como plano de fundo.
+Ela é exibida na tela inicial como plano de fundo e também como uma imagem no centro.
 
 ---
 
